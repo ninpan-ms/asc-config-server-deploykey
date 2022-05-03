@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:ninpan-ms/asc-config-server-deploykey.git
+          ignoreLocalSshSettings: true
+          privateKey: ${sshKey}
+  security:
+    user:
+      name: root
+      password: s3cr3t
+server:
+  port: 8888
